@@ -120,7 +120,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="casos-grid">
         <div class="caso-card scroll-reveal">
           <div class="caso-img">
-            <img src="/images/caso-1.jpg" alt="Sistema de seguimiento operacional" loading="lazy" onerror="this.style.display='none'" />
+            <img src="/images/caso-1.png" alt="Sistema de seguimiento operacional" loading="lazy" onerror="this.style.display='none'" />
           </div>
           <div class="caso-body">
             <span class="caso-tag">Logística</span>
@@ -140,7 +140,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="caso-card scroll-reveal">
           <div class="caso-img">
-            <img src="/images/caso-2.jpg" alt="Dashboard ejecutivo en tiempo real" loading="lazy" onerror="this.style.display='none'" />
+            <img src="/images/caso-2.png" alt="Dashboard ejecutivo en tiempo real" loading="lazy" onerror="this.style.display='none'" />
           </div>
           <div class="caso-body">
             <span class="caso-tag">Servicios profesionales</span>
@@ -160,7 +160,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="caso-card scroll-reveal">
           <div class="caso-img">
-            <img src="/images/caso-3.jpg" alt="Diagnóstico y rediseño técnico" loading="lazy" onerror="this.style.display='none'" />
+            <img src="/images/caso-3.png" alt="Diagnóstico y rediseño técnico" loading="lazy" onerror="this.style.display='none'" />
           </div>
           <div class="caso-body">
             <span class="caso-tag">Comercio</span>
@@ -663,42 +663,39 @@ import Layout from '../layouts/Layout.astro';
 
   async function initParticles() {
     await loadSlim(tsParticles);
-    await tsParticles.load({
-      id: "particles-hero",
-      options: {
-        fpsLimit: 60,
-        particles: {
-          number: {
-            value: window.innerWidth < 768 ? 40 : 80,
-            density: { enable: false },
-          },
-          color: { value: "#c5f74f" },
-          opacity: {
-            value: { min: 0.25, max: 0.4 },
-            animation: { enable: false },
-          },
-          size: {
-            value: { min: 1.5, max: 2.5 },
-            animation: { enable: false },
-          },
-          move: {
-            enable: true,
-            speed: 0.6,
-            direction: "none",
-            random: true,
-            straight: false,
-            outModes: { default: "out" },
-          },
-          links: { enable: false },
-          shape: { type: "circle" },
+    await tsParticles.load("particles-hero", {
+      fpsLimit: 60,
+      particles: {
+        number: {
+          value: window.innerWidth < 768 ? 40 : 80,
+          density: { enable: false },
         },
-        detectRetina: true,
-        background: { color: "transparent" },
-        interactivity: {
-          events: {
-            onHover: { enable: false },
-            onClick: { enable: false },
-          },
+        color: { value: "#c5f74f" },
+        opacity: {
+          value: { min: 0.25, max: 0.4 },
+          animation: { enable: false },
+        },
+        size: {
+          value: { min: 1.5, max: 2.5 },
+          animation: { enable: false },
+        },
+        move: {
+          enable: true,
+          speed: 0.6,
+          direction: "none",
+          random: true,
+          straight: false,
+          outModes: { default: "out" },
+        },
+        links: { enable: false },
+        shape: { type: "circle" },
+      },
+      detectRetina: true,
+      background: { color: "transparent" },
+      interactivity: {
+        events: {
+          onHover: { enable: false },
+          onClick: { enable: false },
         },
       },
     });
