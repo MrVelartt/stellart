@@ -12,6 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@tsparticles/engine": "^4.0.3",
+    "@tsparticles/slim": "^4.0.3",
     "astro": "^6.3.5"
   }
 }

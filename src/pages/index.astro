@@ -7,6 +7,7 @@ import Layout from '../layouts/Layout.astro';
   <!-- Hero -->
   <section class="hero">
     <div class="grid-bg"></div>
+    <div id="particles-hero"></div>
     <div class="container hero-inner">
       <p class="eyebrow fade-in-1">Arquitectura empresarial — desde 2020</p>
       <h1 class="fade-in-2">
@@ -118,47 +119,62 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="casos-grid">
         <div class="caso-card scroll-reveal">
-          <span class="caso-tag">Logística</span>
-          <h3>Sistema de seguimiento operacional</h3>
-          <p>Plataforma de trazabilidad end-to-end para una empresa de distribución con 40+ rutas diarias.</p>
-          <div class="caso-metrics">
-            <div class="metric">
-              <span class="metric-value">−78%</span>
-              <span class="metric-label">tiempo de reporte</span>
-            </div>
-            <div class="metric">
-              <span class="metric-value">100%</span>
-              <span class="metric-label">trazabilidad</span>
+          <div class="caso-img">
+            <img src="/images/caso-1.jpg" alt="Sistema de seguimiento operacional" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="caso-body">
+            <span class="caso-tag">Logística</span>
+            <h3>Sistema de seguimiento operacional</h3>
+            <p>Plataforma de trazabilidad end-to-end para una empresa de distribución con 40+ rutas diarias.</p>
+            <div class="caso-metrics">
+              <div class="metric">
+                <span class="metric-value">−78%</span>
+                <span class="metric-label">tiempo de reporte</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">100%</span>
+                <span class="metric-label">trazabilidad</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="caso-card scroll-reveal">
-          <span class="caso-tag">Servicios profesionales</span>
-          <h3>Dashboard ejecutivo en tiempo real</h3>
-          <p>Modelo unificado de KPIs para firma de consultoría con 5 líneas de negocio y datos dispersos.</p>
-          <div class="caso-metrics">
-            <div class="metric">
-              <span class="metric-value">12</span>
-              <span class="metric-label">KPIs unificados</span>
-            </div>
-            <div class="metric">
-              <span class="metric-value">+34%</span>
-              <span class="metric-label">margen visible</span>
+          <div class="caso-img">
+            <img src="/images/caso-2.jpg" alt="Dashboard ejecutivo en tiempo real" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="caso-body">
+            <span class="caso-tag">Servicios profesionales</span>
+            <h3>Dashboard ejecutivo en tiempo real</h3>
+            <p>Modelo unificado de KPIs para firma de consultoría con 5 líneas de negocio y datos dispersos.</p>
+            <div class="caso-metrics">
+              <div class="metric">
+                <span class="metric-value">12</span>
+                <span class="metric-label">KPIs unificados</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">+34%</span>
+                <span class="metric-label">margen visible</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="caso-card scroll-reveal">
-          <span class="caso-tag">Comercio</span>
-          <h3>Diagnóstico y rediseño técnico</h3>
-          <p>Auditoría completa y migración de sistemas legacy para empresa de retail con 3 canales de venta.</p>
-          <div class="caso-metrics">
-            <div class="metric">
-              <span class="metric-value">−USD 48k</span>
-              <span class="metric-label">costos anuales</span>
-            </div>
-            <div class="metric">
-              <span class="metric-value">3×</span>
-              <span class="metric-label">velocidad operativa</span>
+          <div class="caso-img">
+            <img src="/images/caso-3.jpg" alt="Diagnóstico y rediseño técnico" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="caso-body">
+            <span class="caso-tag">Comercio</span>
+            <h3>Diagnóstico y rediseño técnico</h3>
+            <p>Auditoría completa y migración de sistemas legacy para empresa de retail con 3 canales de venta.</p>
+            <div class="caso-metrics">
+              <div class="metric">
+                <span class="metric-value">−USD 48k</span>
+                <span class="metric-label">costos anuales</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">3×</span>
+                <span class="metric-label">velocidad operativa</span>
+              </div>
             </div>
           </div>
         </div>
@@ -187,6 +203,13 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+  /* Particles */
+  #particles-hero {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
   /* Hero */
   .hero {
     position: relative;
@@ -423,11 +446,32 @@ import Layout from '../layouts/Layout.astro';
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
     border-radius: 12px;
-    padding: 36px 32px;
+    overflow: hidden;
     transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
     display: flex;
     flex-direction: column;
+  }
+
+  .caso-img {
+    aspect-ratio: 16 / 9;
+    background: #1a1a1a;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .caso-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .caso-body {
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
+    flex: 1;
   }
 
   .caso-card:hover {
@@ -457,7 +501,7 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.25;
   }
 
-  .caso-card > p {
+  .caso-body > p {
     font-size: 14px;
     line-height: 1.65;
     font-weight: 300;
@@ -612,3 +656,53 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 </style>
+
+<script>
+  import { tsParticles } from "@tsparticles/engine";
+  import { loadSlim } from "@tsparticles/slim";
+
+  async function initParticles() {
+    await loadSlim(tsParticles);
+    await tsParticles.load({
+      id: "particles-hero",
+      options: {
+        fpsLimit: 60,
+        particles: {
+          number: {
+            value: window.innerWidth < 768 ? 40 : 80,
+            density: { enable: false },
+          },
+          color: { value: "#c5f74f" },
+          opacity: {
+            value: { min: 0.25, max: 0.4 },
+            animation: { enable: false },
+          },
+          size: {
+            value: { min: 1.5, max: 2.5 },
+            animation: { enable: false },
+          },
+          move: {
+            enable: true,
+            speed: 0.6,
+            direction: "none",
+            random: true,
+            straight: false,
+            outModes: { default: "out" },
+          },
+          links: { enable: false },
+          shape: { type: "circle" },
+        },
+        detectRetina: true,
+        background: { color: "transparent" },
+        interactivity: {
+          events: {
+            onHover: { enable: false },
+            onClick: { enable: false },
+          },
+        },
+      },
+    });
+  }
+
+  initParticles();
+</script>
