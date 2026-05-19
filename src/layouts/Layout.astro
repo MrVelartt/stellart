@@ -26,11 +26,12 @@ const pathname = Astro.url.pathname;
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Stellart" />
     <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/lyon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -48,7 +49,9 @@ const pathname = Astro.url.pathname;
     <nav>
       <div class="container nav-inner">
         <a href="/" class="logo">
-          <span class="logo-mark"></span>
+          <span class="logo-mark">
+            <span class="logo-pulse"></span>
+          </span>
           <span class="logo-text">Stellart</span>
         </a>
         <ul class="nav-links">
@@ -69,7 +72,9 @@ const pathname = Astro.url.pathname;
         <div class="footer-grid">
           <div class="footer-brand">
             <a href="/" class="logo">
-              <span class="logo-mark"></span>
+              <span class="logo-mark">
+                <span class="logo-pulse"></span>
+              </span>
               <span class="logo-text">Stellart</span>
             </a>
             <p class="footer-tagline">Arquitectura empresarial e inteligencia operacional.</p>
@@ -135,10 +140,10 @@ const pathname = Astro.url.pathname;
     left: 0;
     right: 0;
     z-index: 100;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    background: rgba(10, 10, 10, 0.75);
-    border-bottom: 1px solid var(--border-subtle);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(9, 8, 15, 0.65);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   }
 
   .nav-inner {
@@ -177,11 +182,25 @@ const pathname = Astro.url.pathname;
     transform: translate(-50%, -50%);
   }
 
+  .logo-pulse {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    animation: logoPulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    opacity: 0;
+  }
+
+  @keyframes logoPulse {
+    0%   { transform: scale(1);   opacity: 0.7; }
+    100% { transform: scale(2.2); opacity: 0;   }
+  }
+
   .logo-text {
     font-family: var(--font-display);
-    font-size: 22px;
+    font-size: 20px;
     color: var(--text-primary);
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: -0.01em;
   }
 
@@ -229,11 +248,9 @@ const pathname = Astro.url.pathname;
     margin-left: 8px;
   }
 
-  /* Footer */
   footer {
     border-top: 1px solid var(--border-subtle);
     padding: 64px 0 40px;
-    margin-top: 0;
   }
 
   .footer-grid {

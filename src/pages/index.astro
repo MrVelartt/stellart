@@ -6,8 +6,17 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- Hero -->
   <section class="hero">
+    <!-- Canvas partículas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Orbes de luz -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Grid (solo mitad derecha) -->
     <div class="grid-bg"></div>
-    <div id="particles-hero"></div>
+
     <div class="container hero-inner">
       <p class="eyebrow fade-in-1">Arquitectura empresarial — desde 2020</p>
       <h1 class="fade-in-2">
@@ -21,18 +30,29 @@ import Layout from '../layouts/Layout.astro';
         <a href="/contacto" class="btn btn-primary btn-arrow">Agendar diagnóstico <span class="arrow">→</span></a>
         <a href="/contacto#descarga" class="btn btn-secondary">Descargar guía técnica</a>
       </div>
-      <div class="hero-stats fade-in-5">
-        <div class="stat">
-          <span class="stat-value">+50</span>
-          <span class="stat-label">proyectos entregados</span>
+
+      <!-- Scroll line -->
+      <div class="scroll-line fade-in-6" aria-hidden="true">
+        <span class="scroll-line-bar"></span>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="stats-bar fade-in-5">
+      <div class="container stats-inner">
+        <div class="stat-item">
+          <span class="stat-num" data-target="48">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Clientes activos</span>
         </div>
-        <div class="stat">
-          <span class="stat-value">100%</span>
-          <span class="stat-label">clientes retenidos</span>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="130">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Sistemas implementados</span>
         </div>
-        <div class="stat">
-          <span class="stat-value">3–6 sem</span>
-          <span class="stat-label">al primer entregable</span>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="98">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Satisfacción</span>
         </div>
       </div>
     </div>
@@ -88,21 +108,21 @@ import Layout from '../layouts/Layout.astro';
           <span class="servicio-num">02</span>
           <div class="servicio-info">
             <h3>Software a medida</h3>
-            <p>Construimos los sistemas internos, integraciones y automatizaciones que tu operación necesita.</p>
+            <p>Construimos exactamente lo que tu operación necesita: sin bloatware, sin licencias innecesarias.</p>
           </div>
           <div class="servicio-meta">
-            <span class="servicio-time">2–6 meses</span>
+            <span class="servicio-time">6–16 semanas</span>
             <span class="servicio-arrow">→</span>
           </div>
         </a>
         <a href="/servicios#kpis" class="servicio-row">
           <span class="servicio-num">03</span>
           <div class="servicio-info">
-            <h3>Dashboards de KPIs</h3>
-            <p>Pipeline de datos unificado, dashboards ejecutivos y alertas automáticas cuando algo sale de rango.</p>
+            <h3>Dashboards & KPIs</h3>
+            <p>Tableros en tiempo real que conectan todas tus fuentes de datos en una vista ejecutiva.</p>
           </div>
           <div class="servicio-meta">
-            <span class="servicio-time">3–6 semanas setup</span>
+            <span class="servicio-time">3–6 semanas</span>
             <span class="servicio-arrow">→</span>
           </div>
         </a>
@@ -115,65 +135,65 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div class="section-header scroll-reveal">
         <p class="eyebrow">Casos reales</p>
-        <h2>Lo que hemos construido<br />para <em>otras empresas</em>.</h2>
+        <h2>Empresas que dejaron de<br />operar a <em>ciegas</em>.</h2>
       </div>
       <div class="casos-grid">
         <div class="caso-card scroll-reveal">
           <div class="caso-img">
-            <img src="/images/caso-1.png" alt="Sistema de seguimiento operacional" loading="lazy" onerror="this.style.display='none'" />
+            <img src="/images/caso-1.png" alt="Caso distribución" loading="lazy" />
           </div>
           <div class="caso-body">
-            <span class="caso-tag">Logística</span>
-            <h3>Sistema de seguimiento operacional</h3>
+            <span class="caso-tag">Distribución</span>
+            <h3>Trazabilidad end-to-end para 40+ rutas diarias</h3>
             <p>Plataforma de trazabilidad end-to-end para una empresa de distribución con 40+ rutas diarias.</p>
             <div class="caso-metrics">
-              <div class="metric">
-                <span class="metric-value">−78%</span>
-                <span class="metric-label">tiempo de reporte</span>
+              <div class="caso-metric">
+                <span class="metric-value">−68%</span>
+                <span class="metric-label">Errores de entrega</span>
               </div>
-              <div class="metric">
-                <span class="metric-value">100%</span>
-                <span class="metric-label">trazabilidad</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="caso-card scroll-reveal">
-          <div class="caso-img">
-            <img src="/images/caso-2.png" alt="Dashboard ejecutivo en tiempo real" loading="lazy" onerror="this.style.display='none'" />
-          </div>
-          <div class="caso-body">
-            <span class="caso-tag">Servicios profesionales</span>
-            <h3>Dashboard ejecutivo en tiempo real</h3>
-            <p>Modelo unificado de KPIs para firma de consultoría con 5 líneas de negocio y datos dispersos.</p>
-            <div class="caso-metrics">
-              <div class="metric">
-                <span class="metric-value">12</span>
-                <span class="metric-label">KPIs unificados</span>
-              </div>
-              <div class="metric">
-                <span class="metric-value">+34%</span>
-                <span class="metric-label">margen visible</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="caso-card scroll-reveal">
-          <div class="caso-img">
-            <img src="/images/caso-3.png" alt="Diagnóstico y rediseño técnico" loading="lazy" onerror="this.style.display='none'" />
-          </div>
-          <div class="caso-body">
-            <span class="caso-tag">Comercio</span>
-            <h3>Diagnóstico y rediseño técnico</h3>
-            <p>Auditoría completa y migración de sistemas legacy para empresa de retail con 3 canales de venta.</p>
-            <div class="caso-metrics">
-              <div class="metric">
-                <span class="metric-value">−USD 48k</span>
-                <span class="metric-label">costos anuales</span>
-              </div>
-              <div class="metric">
+              <div class="caso-metric">
                 <span class="metric-value">3×</span>
-                <span class="metric-label">velocidad operativa</span>
+                <span class="metric-label">Velocidad de despacho</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="caso-card scroll-reveal">
+          <div class="caso-img">
+            <img src="/images/caso-2.png" alt="Caso manufactura" loading="lazy" />
+          </div>
+          <div class="caso-body">
+            <span class="caso-tag">Manufactura</span>
+            <h3>ERP ligero para planta con 3 líneas de producción</h3>
+            <p>Sistema de control de planta que unificó inventario, producción y ventas en una sola plataforma.</p>
+            <div class="caso-metrics">
+              <div class="caso-metric">
+                <span class="metric-value">−40%</span>
+                <span class="metric-label">Tiempo de reporte</span>
+              </div>
+              <div class="caso-metric">
+                <span class="metric-value">+22%</span>
+                <span class="metric-label">Eficiencia operativa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="caso-card scroll-reveal">
+          <div class="caso-img">
+            <img src="/images/caso-3.png" alt="Caso retail" loading="lazy" />
+          </div>
+          <div class="caso-body">
+            <span class="caso-tag">Retail</span>
+            <h3>Dashboard ejecutivo para cadena de 12 tiendas</h3>
+            <p>Tablero en tiempo real que centraliza ventas, inventario y márgenes de 12 puntos de venta.</p>
+            <div class="caso-metrics">
+              <div class="caso-metric">
+                <span class="metric-value">RT</span>
+                <span class="metric-label">Datos en tiempo real</span>
+              </div>
+              <div class="caso-metric">
+                <span class="metric-value">12</span>
+                <span class="metric-label">Tiendas conectadas</span>
               </div>
             </div>
           </div>
@@ -186,14 +206,14 @@ import Layout from '../layouts/Layout.astro';
   <section class="section cta-final">
     <div class="container">
       <div class="cta-box scroll-reveal">
-        <p class="eyebrow">Primer paso</p>
-        <h2>Empieza con un<br /><em>diagnóstico</em>.</h2>
+        <p class="eyebrow">Siguiente paso</p>
+        <h2>¿Tu operación está lista<br />para escalar con <em>datos</em>?</h2>
         <p class="cta-desc">
-          2–3 semanas. Entregamos un informe ejecutivo con todo lo que tu operación necesita para escalar bien.
-          Sin compromisos posteriores.
+          Agendamos una sesión de 45 minutos. Te entregamos un diagnóstico inicial sin costo
+          y sin compromiso.
         </p>
         <div class="cta-btns">
-          <a href="/contacto" class="btn btn-primary btn-arrow">Agendar reunión <span class="arrow">→</span></a>
+          <a href="/contacto" class="btn btn-primary btn-arrow">Agendar diagnóstico <span class="arrow">→</span></a>
           <a href="/servicios" class="btn btn-secondary">Ver servicios</a>
         </div>
       </div>
@@ -203,19 +223,78 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  /* Particles */
-  #particles-hero {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-  }
-
-  /* Hero */
+  /* ── Hero ── */
   .hero {
     position: relative;
-    padding-top: 200px;
-    padding-bottom: 120px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
+  }
+
+  #particles-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Orbes */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(90px);
+  }
+
+  .orb-1 {
+    width: 650px;
+    height: 650px;
+    background: rgba(120, 60, 220, 0.18);
+    top: -120px;
+    right: -80px;
+    animation: orbFloat1 13s ease-in-out infinite;
+  }
+
+  .orb-2 {
+    width: 500px;
+    height: 500px;
+    background: rgba(90, 30, 180, 0.14);
+    bottom: 80px;
+    left: -100px;
+    animation: orbFloat2 17s ease-in-out infinite;
+  }
+
+  .orb-3 {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 107, 43, 0.10);
+    top: 40%;
+    right: 18%;
+    animation: orbFloat3 10s ease-in-out infinite;
+  }
+
+  @keyframes orbFloat1 {
+    0%   { transform: translate(0, 0) scale(1); }
+    33%  { transform: translate(-40px, 30px) scale(1.06); }
+    66%  { transform: translate(25px, -20px) scale(0.96); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+
+  @keyframes orbFloat2 {
+    0%   { transform: translate(0, 0) scale(1); }
+    40%  { transform: translate(50px, -35px) scale(1.08); }
+    75%  { transform: translate(-20px, 20px) scale(0.94); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+
+  @keyframes orbFloat3 {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(-30px, 40px) scale(1.1); }
+    100% { transform: translate(0, 0) scale(1); }
   }
 
   .hero-inner {
@@ -225,6 +304,9 @@ import Layout from '../layouts/Layout.astro';
     flex-direction: column;
     align-items: flex-start;
     max-width: 860px;
+    padding-top: 200px;
+    padding-bottom: 60px;
+    flex: 1;
   }
 
   .hero-inner .eyebrow {
@@ -238,7 +320,7 @@ import Layout from '../layouts/Layout.astro';
   .hero-subtitle {
     font-size: 18px;
     line-height: 1.7;
-    max-width: 600px;
+    max-width: 580px;
     margin-bottom: 40px;
     font-weight: 300;
   }
@@ -247,52 +329,91 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
-    margin-bottom: 72px;
+    margin-bottom: 56px;
   }
 
-  .hero-stats {
+  /* Scroll line */
+  .scroll-line {
     display: flex;
-    gap: 0;
-    border-top: 1px solid var(--border-subtle);
-    width: 100%;
-    max-width: 640px;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .stat {
-    flex: 1;
-    padding: 24px 0;
-    padding-right: 32px;
-    border-right: 1px solid var(--border-subtle);
-  }
-
-  .stat:last-child {
-    border-right: none;
-    padding-left: 32px;
-    padding-right: 0;
-  }
-
-  .stat:not(:first-child):not(:last-child) {
-    padding-left: 32px;
-  }
-
-  .stat-value {
+  .scroll-line-bar {
     display: block;
+    width: 1px;
+    height: 36px;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+    animation: scrollDown 1.8s ease-in-out infinite;
+  }
+
+  @keyframes scrollDown {
+    0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
+    50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+    51%  { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    position: relative;
+    z-index: 2;
+    background: rgba(9, 8, 15, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 28px 0;
+  }
+
+  .stats-inner {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .stat-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+  }
+
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    display: inline;
+  }
+
+  .stat-suffix {
     font-family: var(--font-display);
     font-size: 28px;
-    color: var(--text-primary);
-    margin-bottom: 4px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
   }
 
   .stat-label {
-    display: block;
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 11px;
-    color: var(--text-muted);
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.30);
   }
 
-  /* Problema */
+  .stat-divider {
+    width: 1px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+  }
+
+  /* ── Problema ── */
   .problema {
     background: var(--bg-elevated);
   }
@@ -311,11 +432,10 @@ import Layout from '../layouts/Layout.astro';
     background: var(--bg-card);
     padding: 40px 36px;
     transition: background 0.2s, transform 0.2s;
-    position: relative;
   }
 
   .problema-card:hover {
-    background: #141414;
+    background: #110f1e;
     transform: translateY(-2px);
   }
 
@@ -341,7 +461,7 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 300;
   }
 
-  /* Servicios home */
+  /* ── Servicios ── */
   .servicios-list {
     border-top: 1px solid var(--border-subtle);
     border-bottom: 1px solid var(--border-subtle);
@@ -367,11 +487,9 @@ import Layout from '../layouts/Layout.astro';
   .servicio-row::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
+    left: 0; top: 0; bottom: 0;
     width: 0;
-    background: linear-gradient(90deg, rgba(197, 247, 79, 0.06) 0%, transparent 100%);
+    background: linear-gradient(90deg, rgba(255, 107, 43, 0.06) 0%, transparent 100%);
     transition: width 0.3s ease;
   }
 
@@ -431,7 +549,7 @@ import Layout from '../layouts/Layout.astro';
     transform: translateX(4px);
   }
 
-  /* Casos */
+  /* ── Casos ── */
   .casos {
     background: var(--bg-elevated);
   }
@@ -454,7 +572,7 @@ import Layout from '../layouts/Layout.astro';
 
   .caso-img {
     aspect-ratio: 16 / 9;
-    background: #1a1a1a;
+    background: #130f22;
     overflow: hidden;
     flex-shrink: 0;
   }
@@ -484,9 +602,9 @@ import Layout from '../layouts/Layout.astro';
     display: inline-flex;
     align-items: center;
     padding: 4px 12px;
-    background: rgba(197, 247, 79, 0.08);
+    background: rgba(255, 107, 43, 0.08);
     color: var(--accent);
-    border: 1px solid rgba(197, 247, 79, 0.2);
+    border: 1px solid rgba(255, 107, 43, 0.2);
     border-radius: 100px;
     font-family: var(--font-mono);
     font-size: 10px;
@@ -534,7 +652,7 @@ import Layout from '../layouts/Layout.astro';
     letter-spacing: 0.08em;
   }
 
-  /* CTA Final */
+  /* ── CTA Final ── */
   .cta-final {
     background: var(--bg);
   }
@@ -561,15 +679,11 @@ import Layout from '../layouts/Layout.astro';
     transform: translateX(-50%);
     width: 480px;
     height: 200px;
-    background: radial-gradient(ellipse at center, rgba(197, 247, 79, 0.18) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(255, 107, 43, 0.14) 0%, transparent 70%);
     pointer-events: none;
   }
 
-  .cta-box .eyebrow {
-    position: relative;
-    z-index: 1;
-  }
-
+  .cta-box .eyebrow,
   .cta-box h2 {
     position: relative;
     z-index: 1;
@@ -593,113 +707,209 @@ import Layout from '../layouts/Layout.astro';
     z-index: 1;
   }
 
-  /* Responsive */
+  /* ── Responsive ── */
   @media (max-width: 1024px) {
-    .problema-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .casos-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .cta-box {
-      padding: 56px 48px;
-    }
+    .problema-grid { grid-template-columns: 1fr; }
+    .casos-grid    { grid-template-columns: 1fr 1fr; }
+    .cta-box       { padding: 56px 48px; }
   }
 
   @media (max-width: 768px) {
-    .hero {
+    .hero-inner {
       padding-top: 140px;
-      padding-bottom: 80px;
+      padding-bottom: 40px;
     }
 
-    .hero-subtitle {
-      font-size: 16px;
-    }
+    .hero-subtitle { font-size: 16px; }
 
-    .hero-stats {
+    .stats-inner {
       flex-direction: column;
-      max-width: 100%;
+      gap: 20px;
     }
 
-    .stat {
-      border-right: none;
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 20px 0;
-      padding-left: 0;
+    .stat-divider {
+      width: 40px;
+      height: 1px;
     }
 
-    .stat:last-child {
-      border-bottom: none;
-      padding-left: 0;
-    }
+    .casos-grid    { grid-template-columns: 1fr; }
 
-    .stat:not(:first-child) {
-      padding-left: 0;
-    }
+    .servicio-row  { grid-template-columns: 40px 1fr; }
+    .servicio-meta { display: none; }
 
-    .casos-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .servicio-row {
-      grid-template-columns: 40px 1fr;
-    }
-
-    .servicio-meta {
-      display: none;
-    }
-
-    .cta-box {
-      padding: 48px 28px;
-    }
+    .cta-box { padding: 48px 28px; }
   }
 </style>
 
 <script>
-  import { tsParticles } from "@tsparticles/engine";
-  import { loadSlim } from "@tsparticles/slim";
+  /* ── Canvas particle system ── */
+  (function () {
+    const canvas = document.getElementById('particles-canvas') as HTMLCanvasElement;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d')!;
 
-  async function initParticles() {
-    await loadSlim(tsParticles);
-    await tsParticles.load("particles-hero", {
-      fpsLimit: 60,
-      particles: {
-        number: {
-          value: window.innerWidth < 768 ? 40 : 80,
-          density: { enable: false },
-        },
-        color: { value: "#c5f74f" },
-        opacity: {
-          value: { min: 0.25, max: 0.4 },
-          animation: { enable: false },
-        },
-        size: {
-          value: { min: 1.5, max: 2.5 },
-          animation: { enable: false },
-        },
-        move: {
-          enable: true,
-          speed: 0.6,
-          direction: "none",
-          random: true,
-          straight: false,
-          outModes: { default: "out" },
-        },
-        links: { enable: false },
-        shape: { type: "circle" },
-      },
-      detectRetina: true,
-      background: { color: "transparent" },
-      interactivity: {
-        events: {
-          onHover: { enable: false },
-          onClick: { enable: false },
-        },
-      },
+    let W = 0, H = 0;
+    let mouse = { x: -9999, y: -9999 };
+
+    function resize() {
+      W = canvas.width  = canvas.offsetWidth  || window.innerWidth;
+      H = canvas.height = canvas.offsetHeight || window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    requestAnimationFrame(resize);
+
+    window.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
     });
+
+    window.addEventListener('mouseleave', () => {
+      mouse.x = -9999; mouse.y = -9999;
+    });
+
+    type Particle = {
+      x: number; y: number;
+      vx: number; vy: number;
+      size: number;
+      r: number; g: number; b: number;
+      opacity: number;
+      targetOpacity: number;
+      life: number;
+      maxLife: number;
+    };
+
+    const COUNT = 130;
+    const particles: Particle[] = [];
+
+    function randColor(): [number, number, number] {
+      const roll = Math.random();
+      if (roll < 0.12)  return [255, 107, 43];   // 12% naranja
+      if (roll < 0.28)  return [120, 60, 220];    // 16% púrpura
+      return [255, 255, 255];                       // resto blanco
+    }
+
+    function makeParticle(aged = false): Particle {
+      const [r, g, b] = randColor();
+      const isWhite = r === 255 && g === 255 && b === 255;
+      const maxOpacity = isWhite ? 0.28 + Math.random() * 0.18 : 0.45 + Math.random() * 0.3;
+      const maxLife = 220 + Math.random() * 280;
+      return {
+        x: Math.random() * W,
+        y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.56,
+        vy: (Math.random() - 0.5) * 0.56,
+        size: 0.3 + Math.random() * 1.4,
+        r, g, b,
+        opacity: aged ? maxOpacity : 0,
+        targetOpacity: maxOpacity,
+        life: aged ? Math.floor(Math.random() * maxLife) : 0,
+        maxLife,
+      };
+    }
+
+    for (let i = 0; i < COUNT; i++) particles.push(makeParticle(true));
+
+    const REPULSION_RADIUS = 110;
+    const LINK_RADIUS = 85;
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+
+      for (const p of particles) {
+        // Lifecycle
+        p.life++;
+        const dying = p.life > p.maxLife * 0.85;
+        p.targetOpacity = dying ? 0 : (p.r === 255 && p.g === 255 && p.b === 255 ? 0.34 : 0.6);
+        p.opacity += (p.targetOpacity - p.opacity) * 0.025;
+
+        // Respawn
+        if (p.life >= p.maxLife && p.opacity < 0.01) {
+          Object.assign(p, makeParticle(false));
+          continue;
+        }
+
+        // Mouse repulsion
+        const dx = p.x - mouse.x;
+        const dy = p.y - mouse.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < REPULSION_RADIUS && dist > 0) {
+          const force = (REPULSION_RADIUS - dist) / REPULSION_RADIUS * 0.8;
+          p.vx += (dx / dist) * force;
+          p.vy += (dy / dist) * force;
+        }
+
+        // Dampen velocity
+        p.vx *= 0.98;
+        p.vy *= 0.98;
+
+        // Clamp speed
+        const speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+        if (speed > 1.4) { p.vx *= 1.4 / speed; p.vy *= 1.4 / speed; }
+
+        p.x += p.vx;
+        p.y += p.vy;
+
+        // Wrap edges
+        if (p.x < 0) p.x = W;
+        if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H;
+        if (p.y > H) p.y = 0;
+
+        // Draw particle
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${p.r},${p.g},${p.b},${p.opacity})`;
+        ctx.fill();
+      }
+
+      // Connection lines
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const a = particles[i], b = particles[j];
+          const dx = a.x - b.x, dy = a.y - b.y;
+          const d = Math.sqrt(dx * dx + dy * dy);
+          if (d < LINK_RADIUS) {
+            const alpha = (1 - d / LINK_RADIUS) * Math.min(a.opacity, b.opacity) * 0.55;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.strokeStyle = `rgba(160,112,255,${alpha})`;
+            ctx.lineWidth = 0.6;
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+  })();
+
+  /* ── Count-up stats ── */
+  function countUp(el: Element, target: number, duration: number) {
+    const start = performance.now();
+    function step(now: number) {
+      const t = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - t, 3);
+      (el as HTMLElement).textContent = Math.floor(ease * target).toString();
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
   }
 
-  initParticles();
+  const statsBar = document.querySelector('.stats-bar');
+  if (statsBar) {
+    const io = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        document.querySelectorAll('.stat-num').forEach((el) => {
+          const target = parseInt((el as HTMLElement).dataset.target || '0', 10);
+          countUp(el, target, 1900);
+        });
+        io.disconnect();
+      }
+    }, { threshold: 0.4 });
+    io.observe(statsBar);
+  }
 </script>
