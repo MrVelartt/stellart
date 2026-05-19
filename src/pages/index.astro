@@ -3,37 +3,612 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<section class="hero">
-		<h1>Stellart</h1>
-		<p>
-			Engineering · AI · Automation · Future Systems
-		</p>
 
-		<p>
-			Building intelligent ecosystems through software,
-			data and symbolic architectures.
-		</p>
-	</section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="grid-bg"></div>
+    <div class="container hero-inner">
+      <p class="eyebrow fade-in-1">Arquitectura empresarial — desde 2020</p>
+      <h1 class="fade-in-2">
+        Diseñamos los sistemas<br /><em>que faltan</em> para que tus<br />decisiones tengan respaldo.
+      </h1>
+      <p class="hero-subtitle fade-in-3">
+        Auditamos tu operación. Construimos el software a medida. Implementamos los tableros de KPIs.
+        Tu negocio deja de funcionar por intuición y empieza a operar con datos.
+      </p>
+      <div class="hero-ctas fade-in-4">
+        <a href="/contacto" class="btn btn-primary btn-arrow">Agendar diagnóstico <span class="arrow">→</span></a>
+        <a href="/contacto#descarga" class="btn btn-secondary">Descargar guía técnica</a>
+      </div>
+      <div class="hero-stats fade-in-5">
+        <div class="stat">
+          <span class="stat-value">+50</span>
+          <span class="stat-label">proyectos entregados</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">clientes retenidos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">3–6 sem</span>
+          <span class="stat-label">al primer entregable</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problema -->
+  <section class="section problema">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <p class="eyebrow">El problema</p>
+        <h2>Tu empresa creció más rápido<br />que sus <em>sistemas</em>.</h2>
+      </div>
+      <div class="problema-grid">
+        <div class="problema-card scroll-reveal">
+          <span class="card-number">01</span>
+          <h3>Decisiones por intuición</h3>
+          <p>Reportes en Excel que nadie confía. KPIs que cada área calcula distinto. Reuniones que terminan sin acción.</p>
+        </div>
+        <div class="problema-card scroll-reveal">
+          <span class="card-number">02</span>
+          <h3>Procesos desconectados</h3>
+          <p>Ventas, operaciones y finanzas viven en mundos paralelos. La información se pierde entre departamentos.</p>
+        </div>
+        <div class="problema-card scroll-reveal">
+          <span class="card-number">03</span>
+          <h3>Software que no escala</h3>
+          <p>Sistemas hechos a las prisas que hoy frenan el crecimiento. Cada cambio cuesta meses y miles de dólares.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="section servicios-home">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <p class="eyebrow">Cómo trabajamos</p>
+        <h2>Tres servicios. Uno lleva<br />naturalmente al <em>siguiente</em>.</h2>
+      </div>
+      <div class="servicios-list scroll-reveal">
+        <a href="/servicios#diagnostico" class="servicio-row">
+          <span class="servicio-num">01</span>
+          <div class="servicio-info">
+            <h3>Diagnóstico de arquitectura</h3>
+            <p>Mapeamos tu operación completa e identificamos las brechas críticas con un roadmap priorizado.</p>
+          </div>
+          <div class="servicio-meta">
+            <span class="servicio-time">2–3 semanas</span>
+            <span class="servicio-arrow">→</span>
+          </div>
+        </a>
+        <a href="/servicios#software" class="servicio-row">
+          <span class="servicio-num">02</span>
+          <div class="servicio-info">
+            <h3>Software a medida</h3>
+            <p>Construimos los sistemas internos, integraciones y automatizaciones que tu operación necesita.</p>
+          </div>
+          <div class="servicio-meta">
+            <span class="servicio-time">2–6 meses</span>
+            <span class="servicio-arrow">→</span>
+          </div>
+        </a>
+        <a href="/servicios#kpis" class="servicio-row">
+          <span class="servicio-num">03</span>
+          <div class="servicio-info">
+            <h3>Dashboards de KPIs</h3>
+            <p>Pipeline de datos unificado, dashboards ejecutivos y alertas automáticas cuando algo sale de rango.</p>
+          </div>
+          <div class="servicio-meta">
+            <span class="servicio-time">3–6 semanas setup</span>
+            <span class="servicio-arrow">→</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Casos -->
+  <section class="section casos">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <p class="eyebrow">Casos reales</p>
+        <h2>Lo que hemos construido<br />para <em>otras empresas</em>.</h2>
+      </div>
+      <div class="casos-grid">
+        <div class="caso-card scroll-reveal">
+          <span class="caso-tag">Logística</span>
+          <h3>Sistema de seguimiento operacional</h3>
+          <p>Plataforma de trazabilidad end-to-end para una empresa de distribución con 40+ rutas diarias.</p>
+          <div class="caso-metrics">
+            <div class="metric">
+              <span class="metric-value">−78%</span>
+              <span class="metric-label">tiempo de reporte</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">100%</span>
+              <span class="metric-label">trazabilidad</span>
+            </div>
+          </div>
+        </div>
+        <div class="caso-card scroll-reveal">
+          <span class="caso-tag">Servicios profesionales</span>
+          <h3>Dashboard ejecutivo en tiempo real</h3>
+          <p>Modelo unificado de KPIs para firma de consultoría con 5 líneas de negocio y datos dispersos.</p>
+          <div class="caso-metrics">
+            <div class="metric">
+              <span class="metric-value">12</span>
+              <span class="metric-label">KPIs unificados</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">+34%</span>
+              <span class="metric-label">margen visible</span>
+            </div>
+          </div>
+        </div>
+        <div class="caso-card scroll-reveal">
+          <span class="caso-tag">Comercio</span>
+          <h3>Diagnóstico y rediseño técnico</h3>
+          <p>Auditoría completa y migración de sistemas legacy para empresa de retail con 3 canales de venta.</p>
+          <div class="caso-metrics">
+            <div class="metric">
+              <span class="metric-value">−USD 48k</span>
+              <span class="metric-label">costos anuales</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">3×</span>
+              <span class="metric-label">velocidad operativa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="section cta-final">
+    <div class="container">
+      <div class="cta-box scroll-reveal">
+        <p class="eyebrow">Primer paso</p>
+        <h2>Empieza con un<br /><em>diagnóstico</em>.</h2>
+        <p class="cta-desc">
+          2–3 semanas. Entregamos un informe ejecutivo con todo lo que tu operación necesita para escalar bien.
+          Sin compromisos posteriores.
+        </p>
+        <div class="cta-btns">
+          <a href="/contacto" class="btn btn-primary btn-arrow">Agendar reunión <span class="arrow">→</span></a>
+          <a href="/servicios" class="btn btn-secondary">Ver servicios</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </Layout>
 
 <style>
-.hero{
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
-	align-items:center;
-	min-height:80vh;
-	text-align:center;
-	padding:2rem;
-}
+  /* Hero */
+  .hero {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 120px;
+    overflow: hidden;
+  }
 
-h1{
-	font-size:4rem;
-	margin-bottom:1rem;
-}
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 860px;
+  }
 
-p{
-	max-width:700px;
-	line-height:1.6;
-}
+  .hero-inner .eyebrow {
+    margin-bottom: 28px;
+  }
+
+  .hero-inner h1 {
+    margin-bottom: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 72px;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 0;
+    border-top: 1px solid var(--border-subtle);
+    width: 100%;
+    max-width: 640px;
+  }
+
+  .stat {
+    flex: 1;
+    padding: 24px 0;
+    padding-right: 32px;
+    border-right: 1px solid var(--border-subtle);
+  }
+
+  .stat:last-child {
+    border-right: none;
+    padding-left: 32px;
+    padding-right: 0;
+  }
+
+  .stat:not(:first-child):not(:last-child) {
+    padding-left: 32px;
+  }
+
+  .stat-value {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 28px;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Problema */
+  .problema {
+    background: var(--bg-elevated);
+  }
+
+  .problema-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .problema-card {
+    background: var(--bg-card);
+    padding: 40px 36px;
+    transition: background 0.2s, transform 0.2s;
+    position: relative;
+  }
+
+  .problema-card:hover {
+    background: #141414;
+    transform: translateY(-2px);
+  }
+
+  .card-number {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px var(--accent-glow);
+  }
+
+  .problema-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .problema-card p {
+    font-size: 15px;
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  /* Servicios home */
+  .servicios-list {
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .servicio-row {
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    align-items: center;
+    gap: 32px;
+    padding: 36px 0;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-subtle);
+    position: relative;
+    overflow: hidden;
+    transition: padding-left 0.3s ease;
+  }
+
+  .servicio-row:last-child {
+    border-bottom: none;
+  }
+
+  .servicio-row::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: linear-gradient(90deg, rgba(197, 247, 79, 0.06) 0%, transparent 100%);
+    transition: width 0.3s ease;
+  }
+
+  .servicio-row:hover::before {
+    width: 100%;
+  }
+
+  .servicio-row:hover {
+    padding-left: 8px;
+  }
+
+  .servicio-num {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    text-shadow: 0 0 8px var(--accent-glow);
+  }
+
+  .servicio-info h3 {
+    font-size: clamp(22px, 2.5vw, 32px);
+    margin-bottom: 6px;
+    color: var(--text-primary);
+  }
+
+  .servicio-info p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-weight: 300;
+  }
+
+  .servicio-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+
+  .servicio-time {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  .servicio-arrow {
+    font-size: 20px;
+    color: var(--text-muted);
+    transition: color 0.2s, transform 0.2s;
+    display: block;
+  }
+
+  .servicio-row:hover .servicio-arrow {
+    color: var(--accent);
+    transform: translateX(4px);
+  }
+
+  /* Casos */
+  .casos {
+    background: var(--bg-elevated);
+  }
+
+  .casos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .caso-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 36px 32px;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .caso-card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  }
+
+  .caso-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    background: rgba(197, 247, 79, 0.08);
+    color: var(--accent);
+    border: 1px solid rgba(197, 247, 79, 0.2);
+    border-radius: 100px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    width: fit-content;
+  }
+
+  .caso-card h3 {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .caso-card > p {
+    font-size: 14px;
+    line-height: 1.65;
+    font-weight: 300;
+    flex: 1;
+  }
+
+  .caso-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .metric-value {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 28px;
+    color: var(--accent);
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+
+  .metric-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* CTA Final */
+  .cta-final {
+    background: var(--bg);
+  }
+
+  .cta-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-box::before {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 480px;
+    height: 200px;
+    background: radial-gradient(ellipse at center, rgba(197, 247, 79, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-box .eyebrow {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-box h2 {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-desc {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 520px;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .problema-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .casos-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .cta-box {
+      padding: 56px 48px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: 140px;
+      padding-bottom: 80px;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      max-width: 100%;
+    }
+
+    .stat {
+      border-right: none;
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 20px 0;
+      padding-left: 0;
+    }
+
+    .stat:last-child {
+      border-bottom: none;
+      padding-left: 0;
+    }
+
+    .stat:not(:first-child) {
+      padding-left: 0;
+    }
+
+    .casos-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .servicio-row {
+      grid-template-columns: 40px 1fr;
+    }
+
+    .servicio-meta {
+      display: none;
+    }
+
+    .cta-box {
+      padding: 48px 28px;
+    }
+  }
 </style>
