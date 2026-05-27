@@ -3,19 +3,20 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Contacto — Stellart"
-  description="Agenda una reunión de 30 minutos o descarga nuestra guía gratuita de arquitectura empresarial."
+  title="Contacto — Agenda tu Diagnóstico Gratis | Stellart Corp Villavicencio"
+  description="Agenda tu diagnóstico gratis con Stellart Corp. 30 minutos para entender tu operación y decirte exactamente qué construir. Agentes IA y automatización empresarial en Colombia."
+  canonicalPath="/contacto"
 >
 
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="grid-bg"></div>
     <div class="container page-hero-inner">
-      <p class="eyebrow fade-in-1">Contacto</p>
+      <p class="eyebrow fade-in-1">Contacto — Villavicencio, Colombia</p>
       <h1 class="fade-in-2">Hablemos de tu<br /><em>operación real</em>.</h1>
       <p class="page-hero-sub fade-in-3">
-        30 minutos. Sin agenda comercial. Sin presentación de PowerPoint.
-        Si podemos ayudarte, te lo diremos. Si no, también.
+        30 minutos. Te diagnosticamos sin costo. Te decimos qué construir primero y cuánto cuesta.
+        Si podemos ayudarte, te lo decimos. Si no, también.
       </p>
     </div>
   </section>
@@ -27,8 +28,8 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Formulario -->
         <div class="form-col scroll-reveal">
-          <p class="form-label eyebrow">Agendar reunión</p>
-          <h2 class="form-title">Cuéntanos de tu empresa.</h2>
+          <p class="form-label eyebrow">Diagnóstico gratis</p>
+          <h2 class="form-title">Cuéntanos de tu operación.</h2>
 
           <form class="contact-form" id="contact-form">
             <div class="field-full">
@@ -54,33 +55,33 @@ import Layout from '../layouts/Layout.astro';
                 <label for="equipo">Tamaño del equipo</label>
                 <select id="equipo" name="equipo">
                   <option value="" disabled selected>Selecciona</option>
+                  <option value="5-20">5–20 personas</option>
                   <option value="20-50">20–50 personas</option>
                   <option value="50-100">50–100 personas</option>
-                  <option value="100-500">100–500 personas</option>
-                  <option value="500+">Más de 500</option>
+                  <option value="100+">Más de 100</option>
                 </select>
               </div>
             </div>
             <div class="field-full">
-              <label for="servicio">¿Qué te interesa?</label>
+              <label for="servicio">¿Qué solución te interesa?</label>
               <select id="servicio" name="servicio">
-                <option value="" disabled selected>Selecciona un servicio</option>
+                <option value="" disabled selected>Selecciona</option>
                 <option value="diagnostico">Diagnóstico de arquitectura</option>
+                <option value="ia">Agentes IA y automatización</option>
                 <option value="software">Software a medida</option>
-                <option value="kpis">Dashboards de KPIs</option>
+                <option value="marketing">Marketing con IA</option>
                 <option value="sin-saber">Aún no estoy seguro</option>
               </select>
             </div>
             <div class="field-full">
-              <label for="descripcion">¿Cuál es tu principal desafío operativo?</label>
-              <textarea id="descripcion" name="descripcion" rows="4" placeholder="Cuéntanos brevemente qué está frenando tu operación..."></textarea>
+              <label for="descripcion">¿Qué proceso quieres automatizar o qué sistema te falta?</label>
+              <textarea id="descripcion" name="descripcion" rows="4" placeholder="Ej: necesito un agente IA para WhatsApp, o mis reportes toman 3 días en generarse..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-arrow submit-btn">
-              Enviar mensaje <span class="arrow">→</span>
+              Agenda tu diagnóstico gratis <span class="arrow">→</span>
             </button>
             <p class="form-note">
-              <!-- Conectar con Formspree o Resend aquí -->
-              Te responderemos en menos de 24 horas hábiles.
+              Te respondemos en menos de 24 horas hábiles. Sin presión comercial.
             </p>
           </form>
         </div>
@@ -92,17 +93,18 @@ import Layout from '../layouts/Layout.astro';
           <div class="info-card scroll-reveal">
             <span class="info-card-label eyebrow">Contacto directo</span>
             <a href="mailto:hola@stellart.site" class="contact-email">hola@stellart.site</a>
+            <a href="tel:+573027470798" style="display:block; margin-top:10px; font-size:15px; color:var(--text-secondary); text-decoration:none;">+57 302 747 0798</a>
           </div>
 
           <!-- Descarga -->
           <div class="info-card descarga-card scroll-reveal" id="descarga">
             <span class="eyebrow recurso-eyebrow">Recurso gratuito</span>
-            <h3>Guía de arquitectura empresarial</h3>
-            <p>PDF de 32 páginas con el marco que usamos en diagnósticos reales.</p>
+            <h3>Guía de automatización empresarial</h3>
+            <p>PDF con el marco que usamos para diagnosticar operaciones y decidir qué automatizar primero.</p>
             <ul class="recurso-lista">
-              <li><span class="recurso-arrow">→</span> Marco de evaluación</li>
-              <li><span class="recurso-arrow">→</span> Plantilla de mapa de sistemas</li>
-              <li><span class="recurso-arrow">→</span> Checklist de auditoría</li>
+              <li><span class="recurso-arrow">→</span> Cómo evaluar qué automatizar</li>
+              <li><span class="recurso-arrow">→</span> Mapa de sistemas a medida</li>
+              <li><span class="recurso-arrow">→</span> Checklist para agentes IA</li>
               <li><span class="recurso-arrow">→</span> Cómo priorizar inversión técnica</li>
             </ul>
             <div class="descarga-form">
@@ -114,7 +116,7 @@ import Layout from '../layouts/Layout.astro';
           <!-- Ubicación -->
           <div class="info-card scroll-reveal">
             <span class="info-card-label eyebrow">Dónde operamos</span>
-            <p class="ubicacion-text">Operamos remotamente con clientes en Latinoamérica. Reuniones presenciales bajo coordinación.</p>
+            <p class="ubicacion-text">Villavicencio, Meta, Colombia. Operamos remotamente con empresas en toda Colombia y Latinoamérica.</p>
           </div>
 
         </div>
@@ -133,51 +135,51 @@ import Layout from '../layouts/Layout.astro';
 
         <details class="faq-item">
           <summary class="faq-summary">
-            <h3>¿Cuánto cuesta empezar a trabajar con ustedes?</h3>
+            <h3>¿El diagnóstico realmente es gratis?</h3>
             <span class="faq-icon">+</span>
           </summary>
           <div class="faq-body">
-            <p>El diagnóstico de arquitectura parte desde USD 2.500 con una duración de 2–3 semanas. No requiere comité interno ni procesos de aprobación complejos. Es un entregable independiente que puedes ejecutar con o sin nosotros después.</p>
+            <p>La primera sesión de 30 minutos es completamente gratuita. En esa reunión diagnosticamos tu operación y te decimos qué construir primero. Si después quieres el diagnóstico completo documentado, ese sí tiene costo desde USD 2.500. Pero la conversación inicial no compromete nada.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-summary">
-            <h3>¿Trabajan con empresas pequeñas o solo grandes?</h3>
+            <h3>¿Con qué tipo de empresas trabajan?</h3>
             <span class="faq-icon">+</span>
           </summary>
           <div class="faq-body">
-            <p>Trabajamos con empresas que ya tienen operación establecida: equipos de 20 o más personas con procesos definidos pero con sistemas que no escalan. No trabajamos con startups en etapa temprana que todavía no tienen operación clara.</p>
+            <p>Empresas con operación establecida que quieren automatizar procesos, construir agentes IA o desarrollar software propio. Trabajamos desde Villavicencio con empresas en toda Colombia y Latinoamérica. No trabajamos con startups sin operación clara.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-summary">
-            <h3>¿Qué pasa después del diagnóstico? ¿Estoy obligado a contratarlos?</h3>
+            <h3>¿Qué es exactamente un agente IA?</h3>
             <span class="faq-icon">+</span>
           </summary>
           <div class="faq-body">
-            <p>No. El diagnóstico es un entregable completamente independiente. Te llevas el informe ejecutivo y el roadmap y puedes ejecutarlo con tu equipo interno, con otros proveedores o con nosotros. Sin compromisos posteriores.</p>
+            <p>Un agente IA es un sistema que ejecuta tareas de forma autónoma: responde clientes en WhatsApp, procesa documentos, genera reportes, detecta anomalías. A diferencia de un chatbot básico, un agente puede razonar, tomar decisiones y conectarse con tus sistemas internos para actuar.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-summary">
-            <h3>¿Cuánto tarda un proyecto típico?</h3>
+            <h3>¿Cuánto tarda implementar un agente IA?</h3>
             <span class="faq-icon">+</span>
           </summary>
           <div class="faq-body">
-            <p>El diagnóstico toma 2–3 semanas. Los proyectos de software duran entre 2–6 meses con entregas cada 2–3 semanas. El setup de dashboards toma 3–6 semanas y luego pasa a mantenimiento mensual. Los tiempos exactos dependen del alcance definido en la propuesta.</p>
+            <p>Entre 3 y 8 semanas dependiendo de la complejidad. Agentes de atención al cliente pueden estar en producción en 3 semanas. Agentes de automatización interna conectados a múltiples sistemas toman 6–8 semanas. Primera entrega siempre en las primeras 2–3 semanas.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-summary">
-            <h3>¿Usan IA en sus servicios?</h3>
+            <h3>¿Por qué Villavicencio?</h3>
             <span class="faq-icon">+</span>
           </summary>
           <div class="faq-body">
-            <p>Sí, cuando aporta valor real y medible. Construimos agentes para automatización de procesos, asistentes internos para equipos operativos y modelos de análisis de datos. No usamos IA como buzzword — la incorporamos cuando resuelve un problema concreto mejor que la alternativa tradicional.</p>
+            <p>Stellart Corp nació en los Llanos Orientales porque aquí hay empresas reales con operaciones reales que no tienen acceso a las soluciones de IA que usan las grandes corporaciones. Construimos tecnología de nivel mundial desde el Llano para empresas que operan en Colombia y más allá.</p>
           </div>
         </details>
 

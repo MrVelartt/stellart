@@ -1,0 +1,147 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="I+D — Stellart Corp"
+  description="Proyectos que no tienen cliente todavía. Investigación aplicada en IA, movilidad y sistemas de decisión desde Villavicencio, Colombia."
+  canonicalPath="/id"
+>
+
+  <section class="id-hero">
+    <div class="grid-bg"></div>
+    <div class="container id-inner">
+      <p class="eyebrow fade-in-1">Laboratorio interno</p>
+      <h1 class="fade-in-2">Laboratorio / En construcción permanente.</h1>
+    </div>
+  </section>
+
+  <section class="section id-section">
+    <div class="container id-content">
+
+      <div class="id-bloque scroll-reveal">
+        <p>Algo está siendo construido. No todo puede mostrarse aún.</p>
+        <p>Stellart Corp destina una parte de su operación a proyectos que no tienen cliente — solo una hipótesis y el tiempo necesario para demostrarla. No son prototipos. Son sistemas en desarrollo activo que responden a preguntas que el mercado todavía no sabe que tiene.</p>
+      </div>
+
+      <div class="id-bloque scroll-reveal">
+        <span class="id-label">Proyectos activos</span>
+        <p>Hay un sistema en construcción para ciudades intermedias. Movilidad. Datos en tiempo real. Decisiones que hoy toman minutos y deberían tomar segundos. No podemos decir más.</p>
+        <p>Hay otro proyecto al que llamamos System 2.0. Una capa de inteligencia que conecta operaciones dispersas en una sola superficie de decisión. No es un dashboard. No es un ERP. Es algo entre las dos cosas que todavía no tiene nombre definitivo.</p>
+        <p>Y hay una herramienta pública en desarrollo — diseñada para que cualquier persona, no solo empresas, pueda operar con datos. Sin necesitar un equipo técnico. Sin necesitar presupuesto. El acceso a sistemas de decisión no debería ser exclusivo.</p>
+      </div>
+
+      <div class="id-bloque scroll-reveal">
+        <span class="id-label">Filosofía</span>
+        <p>No construimos para el mercado actual. Construimos para el mercado que viene.</p>
+        <p>Villavicencio no es el límite — es el origen. Desde los Llanos Orientales se puede ver con claridad lo que las ciudades grandes ya no distinguen: que la mayoría de empresas todavía operan en el siglo pasado, y que la brecha entre lo que existe y lo que debería existir es enorme.</p>
+        <p>Esa brecha es nuestro territorio.</p>
+      </div>
+
+      <div class="id-cierre scroll-reveal">
+        <p>Si estás trabajando en algo que todavía no tiene nombre, escríbenos:</p>
+        <a href="mailto:id@stellart.site" class="id-email">id@stellart.site</a>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .id-hero {
+    position: relative;
+    padding-top: 180px;
+    padding-bottom: 80px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .id-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+  }
+
+  .id-inner .eyebrow {
+    margin-bottom: 28px;
+  }
+
+  .id-inner h1 {
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.1;
+    font-style: italic;
+  }
+
+  .id-section {
+    background: var(--bg);
+  }
+
+  .id-content {
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+  }
+
+  .id-bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .id-bloque p {
+    font-size: 17px;
+    line-height: 1.85;
+    font-weight: 300;
+    color: var(--text-secondary);
+  }
+
+  .id-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+    text-shadow: 0 0 8px var(--accent-glow);
+  }
+
+  .id-cierre {
+    padding-top: 48px;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .id-cierre p {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .id-email {
+    font-family: var(--font-display);
+    font-size: 28px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: inline-block;
+  }
+
+  .id-email:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 768px) {
+    .id-hero {
+      padding-top: 130px;
+      padding-bottom: 60px;
+    }
+
+    .id-content {
+      gap: 48px;
+    }
+  }
+</style>

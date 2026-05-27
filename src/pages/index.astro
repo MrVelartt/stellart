@@ -2,57 +2,169 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout>
+<Layout
+  title="Agentes IA en Villavicencio — Stellart Corp | Automatización Empresarial Colombia"
+  description="Stellart Corp construye agentes IA, software a medida y sistemas de decisión en tiempo real. Automatización empresarial para Colombia desde Villavicencio, Llanos Orientales."
+  canonicalPath="/"
+>
 
   <!-- Hero -->
   <section class="hero">
-    <!-- Canvas partículas -->
     <canvas id="particles-canvas"></canvas>
-
-    <!-- Orbes de luz -->
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
-
-    <!-- Grid (solo mitad derecha) -->
     <div class="grid-bg"></div>
 
+    <!-- Robot IA conceptual -->
+    <div class="robot-wrap" aria-hidden="true">
+      <svg class="robot-svg" viewBox="0 0 360 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="rgo" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <linearGradient id="rg-bd" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="rgba(120,60,220,0.22)"/>
+            <stop offset="100%" stop-color="rgba(60,20,140,0.07)"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Antenna -->
+        <line x1="180" y1="8" x2="180" y2="62" stroke="rgba(120,60,220,0.5)" stroke-width="2.5"/>
+        <circle cx="180" cy="8" r="10" fill="rgba(255,107,43,0.85)" filter="url(#rgo)">
+          <animate attributeName="r" values="9;13;9" dur="1.8s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.65;1;0.65" dur="1.8s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Head -->
+        <rect x="88" y="62" width="184" height="148" rx="22" fill="url(#rg-bd)" stroke="rgba(120,60,220,0.5)" stroke-width="1.5"/>
+        <rect x="88" y="62" width="184" height="5" rx="2.5" fill="rgba(160,112,255,0.3)"/>
+
+        <!-- Eye sockets -->
+        <circle cx="138" cy="132" r="28" fill="rgba(0,0,0,0.25)" stroke="rgba(120,60,220,0.4)" stroke-width="1.2"/>
+        <circle cx="222" cy="132" r="28" fill="rgba(0,0,0,0.25)" stroke="rgba(120,60,220,0.4)" stroke-width="1.2"/>
+
+        <!-- Eyes glow -->
+        <circle cx="138" cy="132" r="15" fill="rgba(255,107,43,0.8)" filter="url(#rgo)">
+          <animate attributeName="opacity" values="0.65;1;0.65" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="222" cy="132" r="15" fill="rgba(255,107,43,0.8)" filter="url(#rgo)">
+          <animate attributeName="opacity" values="0.65;1;0.65" dur="2.5s" begin="0.35s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="138" cy="132" r="5" fill="rgba(255,210,170,0.95)"/>
+        <circle cx="222" cy="132" r="5" fill="rgba(255,210,170,0.95)"/>
+
+        <!-- Mouth -->
+        <rect x="128" y="175" width="104" height="9" rx="4.5" fill="rgba(120,60,220,0.4)"/>
+
+        <!-- Neck -->
+        <rect x="154" y="210" width="52" height="38" rx="7" fill="rgba(90,30,180,0.28)" stroke="rgba(120,60,220,0.28)" stroke-width="1"/>
+        <rect x="154" y="220" width="52" height="2" fill="rgba(160,112,255,0.22)"/>
+        <rect x="154" y="228" width="52" height="2" fill="rgba(160,112,255,0.22)"/>
+        <rect x="154" y="236" width="52" height="2" fill="rgba(160,112,255,0.22)"/>
+
+        <!-- Body -->
+        <rect x="56" y="248" width="248" height="212" rx="26" fill="url(#rg-bd)" stroke="rgba(120,60,220,0.4)" stroke-width="1.5"/>
+        <rect x="56" y="248" width="248" height="5" rx="2.5" fill="rgba(160,112,255,0.2)"/>
+
+        <!-- Chest panel -->
+        <rect x="96" y="278" width="168" height="118" rx="14" fill="rgba(120,60,220,0.06)" stroke="rgba(120,60,220,0.2)" stroke-width="1"/>
+
+        <!-- Core reactor -->
+        <circle cx="180" cy="315" r="34" fill="rgba(255,107,43,0.05)" stroke="rgba(255,107,43,0.25)" stroke-width="1.2"/>
+        <circle cx="180" cy="315" r="20" fill="rgba(255,107,43,0.1)" stroke="rgba(255,107,43,0.45)" stroke-width="1.5"/>
+        <circle cx="180" cy="315" r="10" fill="rgba(255,107,43,0.6)" filter="url(#rgo)">
+          <animate attributeName="r" values="9;13;9" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.5;0.95;0.5" dur="3s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Chest circuit lines -->
+        <line x1="96" y1="370" x2="264" y2="370" stroke="rgba(120,60,220,0.17)" stroke-width="1"/>
+        <line x1="112" y1="382" x2="248" y2="382" stroke="rgba(120,60,220,0.11)" stroke-width="1"/>
+
+        <!-- Shoulder joints -->
+        <circle cx="56" cy="268" r="20" fill="rgba(90,30,180,0.16)" stroke="rgba(120,60,220,0.4)" stroke-width="1.5"/>
+        <circle cx="304" cy="268" r="20" fill="rgba(90,30,180,0.16)" stroke="rgba(120,60,220,0.4)" stroke-width="1.5"/>
+
+        <!-- Left arm -->
+        <rect x="14" y="278" width="44" height="160" rx="18" fill="url(#rg-bd)" stroke="rgba(120,60,220,0.3)" stroke-width="1.5"/>
+        <rect x="14" y="325" width="44" height="2" fill="rgba(160,112,255,0.16)"/>
+        <rect x="14" y="342" width="44" height="2" fill="rgba(160,112,255,0.16)"/>
+        <rect x="5" y="432" width="62" height="28" rx="12" fill="rgba(90,30,180,0.16)" stroke="rgba(120,60,220,0.3)" stroke-width="1.5"/>
+
+        <!-- Right arm -->
+        <rect x="302" y="278" width="44" height="160" rx="18" fill="url(#rg-bd)" stroke="rgba(120,60,220,0.3)" stroke-width="1.5"/>
+        <rect x="302" y="325" width="44" height="2" fill="rgba(160,112,255,0.16)"/>
+        <rect x="302" y="342" width="44" height="2" fill="rgba(160,112,255,0.16)"/>
+        <rect x="293" y="432" width="62" height="28" rx="12" fill="rgba(90,30,180,0.16)" stroke="rgba(120,60,220,0.3)" stroke-width="1.5"/>
+
+        <!-- Hip -->
+        <rect x="78" y="460" width="204" height="20" rx="8" fill="rgba(90,30,180,0.13)" stroke="rgba(120,60,220,0.2)" stroke-width="1"/>
+
+        <!-- Legs -->
+        <rect x="92" y="478" width="74" height="144" rx="18" fill="url(#rg-bd)" stroke="rgba(120,60,220,0.26)" stroke-width="1.5"/>
+        <rect x="92" y="534" width="74" height="2" fill="rgba(160,112,255,0.16)"/>
+        <rect x="194" y="478" width="74" height="144" rx="18" fill="url(#rg-bd)" stroke="rgba(120,60,220,0.26)" stroke-width="1.5"/>
+        <rect x="194" y="534" width="74" height="2" fill="rgba(160,112,255,0.16)"/>
+
+        <!-- Feet -->
+        <rect x="76" y="604" width="96" height="28" rx="12" fill="rgba(90,30,180,0.16)" stroke="rgba(120,60,220,0.28)" stroke-width="1.5"/>
+        <rect x="188" y="604" width="96" height="28" rx="12" fill="rgba(90,30,180,0.16)" stroke="rgba(120,60,220,0.28)" stroke-width="1.5"/>
+
+        <!-- Floating data nodes -->
+        <circle cx="28" cy="170" r="3.5" fill="rgba(255,107,43,0.7)" filter="url(#rgo)">
+          <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.2s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="170;162;170" dur="2.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="340" cy="195" r="2.5" fill="rgba(160,112,255,0.8)">
+          <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="40" cy="395" r="2.5" fill="rgba(160,112,255,0.6)">
+          <animate attributeName="opacity" values="0.4;1;0.4" dur="2.7s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="395;386;395" dur="2.7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="330" cy="355" r="3" fill="rgba(255,107,43,0.55)" filter="url(#rgo)">
+          <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.9s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+
     <div class="container hero-inner">
-      <p class="eyebrow fade-in-1">Arquitectura empresarial — desde 2020</p>
+      <p class="eyebrow fade-in-1">Inteligencia artificial operacional — Villavicencio, Colombia</p>
       <h1 class="fade-in-2">
-        Diseñamos los sistemas<br /><em>que faltan</em> para que tus<br />decisiones tengan respaldo.
+        Inteligencia artificial<br /><em>operacional.</em><br />Lo que falta en tu operación, construido.
       </h1>
       <p class="hero-subtitle fade-in-3">
-        Auditamos tu operación. Construimos el software a medida. Implementamos los tableros de KPIs.
-        Tu negocio deja de funcionar por intuición y empieza a operar con datos.
+        Construimos agentes IA, software a medida y sistemas de decisión con datos.
+        Desde los Llanos Orientales para empresas que operan en serio.
       </p>
       <div class="hero-ctas fade-in-4">
-        <a href="/contacto" class="btn btn-primary btn-arrow">Agendar diagnóstico <span class="arrow">→</span></a>
-        <a href="/contacto#descarga" class="btn btn-secondary">Descargar guía técnica</a>
+        <a href="/contacto" class="btn btn-primary btn-arrow">Agenda tu diagnóstico gratis <span class="arrow">→</span></a>
+        <a href="/servicios" class="btn btn-secondary">Ver soluciones</a>
       </div>
 
-      <!-- Scroll line -->
       <div class="scroll-line fade-in-6" aria-hidden="true">
         <span class="scroll-line-bar"></span>
       </div>
     </div>
 
-    <!-- Stats bar -->
+    <!-- Stats bar sin contadores falsos -->
     <div class="stats-bar fade-in-5">
       <div class="container stats-inner">
         <div class="stat-item">
-          <span class="stat-num" data-target="48">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Clientes activos</span>
+          <span class="stat-num" style="font-size:18px; letter-spacing:-0.01em">Villavicencio</span>
+          <span class="stat-label">Llanos Orientales, Colombia</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <span class="stat-num" data-target="130">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Sistemas implementados</span>
+          <span class="stat-num" style="font-size:18px; letter-spacing:-0.01em">4 líneas</span>
+          <span class="stat-label">Software · IA · Marketing · I+D</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <span class="stat-num" data-target="98">0</span><span class="stat-suffix">%</span>
-          <span class="stat-label">Satisfacción</span>
+          <span class="stat-num" style="font-size:18px; letter-spacing:-0.01em">Nivel mundial</span>
+          <span class="stat-label">Soluciones sin fronteras</span>
         </div>
       </div>
     </div>
@@ -62,67 +174,78 @@ import Layout from '../layouts/Layout.astro';
   <section class="section problema">
     <div class="container">
       <div class="section-header scroll-reveal">
-        <p class="eyebrow">El problema</p>
-        <h2>Tu empresa creció más rápido<br />que sus <em>sistemas</em>.</h2>
+        <p class="eyebrow">El problema real</p>
+        <h2>Tu operación genera datos.<br />Ninguno se <em>usa</em>.</h2>
       </div>
       <div class="problema-grid">
         <div class="problema-card scroll-reveal">
           <span class="card-number">01</span>
-          <h3>Decisiones por intuición</h3>
-          <p>Reportes en Excel que nadie confía. KPIs que cada área calcula distinto. Reuniones que terminan sin acción.</p>
+          <h3>Decisiones sin datos</h3>
+          <p>Reportes en Excel que nadie confía. KPIs que cada área calcula distinto. Reuniones que terminan sin acción concreta.</p>
         </div>
         <div class="problema-card scroll-reveal">
           <span class="card-number">02</span>
-          <h3>Procesos desconectados</h3>
-          <p>Ventas, operaciones y finanzas viven en mundos paralelos. La información se pierde entre departamentos.</p>
+          <h3>Procesos manuales que escalan mal</h3>
+          <p>Tareas repetitivas que consumen tiempo y generan errores. Lo que un agente IA resuelve en segundos, hoy toma horas.</p>
         </div>
         <div class="problema-card scroll-reveal">
           <span class="card-number">03</span>
-          <h3>Software que no escala</h3>
-          <p>Sistemas hechos a las prisas que hoy frenan el crecimiento. Cada cambio cuesta meses y miles de dólares.</p>
+          <h3>Software que no conecta</h3>
+          <p>Ventas, operaciones y finanzas en silos. La información existe pero no fluye. Cada integración cuesta meses.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Servicios -->
+  <!-- Soluciones -->
   <section class="section servicios-home">
     <div class="container">
       <div class="section-header scroll-reveal">
-        <p class="eyebrow">Cómo trabajamos</p>
-        <h2>Tres servicios. Uno lleva<br />naturalmente al <em>siguiente</em>.</h2>
+        <p class="eyebrow">Cuatro líneas. Un sistema.</p>
+        <h2>No vendemos herramientas.<br />Construimos <em>capacidades</em>.</h2>
       </div>
       <div class="servicios-list scroll-reveal">
         <a href="/servicios#diagnostico" class="servicio-row">
           <span class="servicio-num">01</span>
           <div class="servicio-info">
             <h3>Diagnóstico de arquitectura</h3>
-            <p>Mapeamos tu operación completa e identificamos las brechas críticas con un roadmap priorizado.</p>
+            <p>Mapeamos tu operación completa e identificamos exactamente dónde está el cuello de botella.</p>
           </div>
           <div class="servicio-meta">
             <span class="servicio-time">2–3 semanas</span>
             <span class="servicio-arrow">→</span>
           </div>
         </a>
-        <a href="/servicios#software" class="servicio-row">
+        <a href="/servicios#ia" class="servicio-row">
           <span class="servicio-num">02</span>
           <div class="servicio-info">
+            <h3>IA Operacional — Agentes IA Colombia</h3>
+            <p>Agentes que trabajan solos: automatizan procesos, responden clientes, analizan datos. Vibe engineering aplicado.</p>
+          </div>
+          <div class="servicio-meta">
+            <span class="servicio-time">3–8 semanas</span>
+            <span class="servicio-arrow">→</span>
+          </div>
+        </a>
+        <a href="/servicios#software" class="servicio-row">
+          <span class="servicio-num">03</span>
+          <div class="servicio-info">
             <h3>Software a medida</h3>
-            <p>Construimos exactamente lo que tu operación necesita: sin bloatware, sin licencias innecesarias.</p>
+            <p>Sistemas propios construidos para tu operación específica. Sin bloatware, sin licencias genéricas.</p>
           </div>
           <div class="servicio-meta">
             <span class="servicio-time">6–16 semanas</span>
             <span class="servicio-arrow">→</span>
           </div>
         </a>
-        <a href="/servicios#kpis" class="servicio-row">
-          <span class="servicio-num">03</span>
+        <a href="/servicios#marketing" class="servicio-row">
+          <span class="servicio-num">04</span>
           <div class="servicio-info">
-            <h3>Dashboards & KPIs</h3>
-            <p>Tableros en tiempo real que conectan todas tus fuentes de datos en una vista ejecutiva.</p>
+            <h3>Marketing con IA</h3>
+            <p>Meta Ads optimizados con IA, SEO técnico y automatización de captación. Clientes que llegan solos.</p>
           </div>
           <div class="servicio-meta">
-            <span class="servicio-time">3–6 semanas</span>
+            <span class="servicio-time">Desde 4 semanas</span>
             <span class="servicio-arrow">→</span>
           </div>
         </a>
@@ -134,18 +257,18 @@ import Layout from '../layouts/Layout.astro';
   <section class="section casos">
     <div class="container">
       <div class="section-header scroll-reveal">
-        <p class="eyebrow">Casos reales</p>
-        <h2>Empresas que dejaron de<br />operar a <em>ciegas</em>.</h2>
+        <p class="eyebrow">Resultados reales</p>
+        <h2>Empresas colombianas que<br />dejaron de operar a <em>ciegas</em>.</h2>
       </div>
       <div class="casos-grid">
         <div class="caso-card scroll-reveal">
           <div class="caso-img">
-            <img src="/images/caso-1.png" alt="Caso distribución" loading="lazy" />
+            <img src="/images/caso-1.png" alt="Automatización distribución Colombia" loading="lazy" />
           </div>
           <div class="caso-body">
             <span class="caso-tag">Distribución</span>
-            <h3>Trazabilidad end-to-end para 40+ rutas diarias</h3>
-            <p>Plataforma de trazabilidad end-to-end para una empresa de distribución con 40+ rutas diarias.</p>
+            <h3>Trazabilidad en tiempo real para 40+ rutas diarias</h3>
+            <p>Agente IA + plataforma de trazabilidad para empresa distribuidora en los Llanos Orientales. Cero papel, datos en tiempo real.</p>
             <div class="caso-metrics">
               <div class="caso-metric">
                 <span class="metric-value">−68%</span>
@@ -160,12 +283,12 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="caso-card scroll-reveal">
           <div class="caso-img">
-            <img src="/images/caso-2.png" alt="Caso manufactura" loading="lazy" />
+            <img src="/images/caso-2.png" alt="Sistema ERP manufactura Colombia" loading="lazy" />
           </div>
           <div class="caso-body">
             <span class="caso-tag">Manufactura</span>
-            <h3>ERP ligero para planta con 3 líneas de producción</h3>
-            <p>Sistema de control de planta que unificó inventario, producción y ventas en una sola plataforma.</p>
+            <h3>ERP propio para planta con 3 líneas de producción</h3>
+            <p>Sistema de decisión con datos que unificó inventario, producción y ventas. Construido a medida, no adaptado de un genérico.</p>
             <div class="caso-metrics">
               <div class="caso-metric">
                 <span class="metric-value">−40%</span>
@@ -180,12 +303,12 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="caso-card scroll-reveal">
           <div class="caso-img">
-            <img src="/images/caso-3.png" alt="Caso retail" loading="lazy" />
+            <img src="/images/caso-3.png" alt="Dashboard KPIs retail Colombia" loading="lazy" />
           </div>
           <div class="caso-body">
             <span class="caso-tag">Retail</span>
             <h3>Dashboard ejecutivo para cadena de 12 tiendas</h3>
-            <p>Tablero en tiempo real que centraliza ventas, inventario y márgenes de 12 puntos de venta.</p>
+            <p>Tablero de KPIs en tiempo real con alertas automáticas. El gerente ve todo el negocio desde una sola pantalla.</p>
             <div class="caso-metrics">
               <div class="caso-metric">
                 <span class="metric-value">RT</span>
@@ -207,14 +330,14 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div class="cta-box scroll-reveal">
         <p class="eyebrow">Siguiente paso</p>
-        <h2>¿Tu operación está lista<br />para escalar con <em>datos</em>?</h2>
+        <h2>¿Listo para operar<br />con <em>inteligencia real</em>?</h2>
         <p class="cta-desc">
-          Agendamos una sesión de 45 minutos. Te entregamos un diagnóstico inicial sin costo
-          y sin compromiso.
+          30 minutos. Diagnosticamos tu operación sin costo y te decimos exactamente qué construir primero.
+          Desde Villavicencio para donde tu empresa necesite llegar.
         </p>
         <div class="cta-btns">
-          <a href="/contacto" class="btn btn-primary btn-arrow">Agendar diagnóstico <span class="arrow">→</span></a>
-          <a href="/servicios" class="btn btn-secondary">Ver servicios</a>
+          <a href="/contacto" class="btn btn-primary btn-arrow">Agenda tu diagnóstico gratis <span class="arrow">→</span></a>
+          <a href="/servicios" class="btn btn-secondary">Ver soluciones</a>
         </div>
       </div>
     </div>
@@ -230,6 +353,42 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     flex-direction: column;
     overflow: hidden;
+  }
+
+  /* ── Robot ── */
+  .robot-wrap {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 38%;
+    max-width: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .robot-svg {
+    width: 88%;
+    height: auto;
+    opacity: 0.62;
+    animation: robotFloat 9s ease-in-out infinite;
+    filter: drop-shadow(0 0 32px rgba(120,60,220,0.18));
+  }
+
+  @keyframes robotFloat {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-22px); }
+  }
+
+  @media (max-width: 1100px) {
+    .robot-wrap { width: 30%; opacity: 0.4; }
+  }
+
+  @media (max-width: 768px) {
+    .robot-wrap { display: none; }
   }
 
   #particles-canvas {

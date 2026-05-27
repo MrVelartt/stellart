@@ -4,14 +4,36 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  canonicalPath?: string;
 }
 
 const {
-  title = 'Stellart — Arquitectura empresarial e inteligencia operacional',
-  description = 'Diagnosticamos tu operación y construimos los sistemas que faltan para que tus decisiones se basen en datos, no en intuición.',
+  title = 'Stellart Corp — Agentes IA y Automatización Empresarial en Villavicencio, Colombia',
+  description = 'Construimos agentes IA, software a medida y sistemas de decisión en tiempo real. Automatización empresarial para Colombia desde Villavicencio, Llanos Orientales.',
+  canonicalPath,
 } = Astro.props;
 
 const pathname = Astro.url.pathname;
+const canonicalURL = new URL(canonicalPath ?? pathname, 'https://www.stellart.site').href;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Stellart Corp",
+  "url": "https://www.stellart.site",
+  "telephone": "+573027470798",
+  "email": "hola@stellart.site",
+  "description": "Agentes IA Villavicencio. Automatización empresarial Colombia. Sistemas de decisión con datos desde los Llanos Orientales para el mundo.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Cl. 38 #No. 30 A - 60",
+    "addressLocality": "Villavicencio",
+    "addressRegion": "Meta",
+    "addressCountry": "CO"
+  },
+  "areaServed": ["Colombia", "Latinoamérica"],
+  "knowsAbout": ["Agentes IA", "Automatización empresarial", "Inteligencia artificial", "Software a medida", "Dashboards KPIs"]
+};
 ---
 
 <!doctype html>
@@ -21,11 +43,14 @@ const pathname = Astro.url.pathname;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Stellart" />
+    <meta property="og:site_name" content="Stellart Corp" />
+    <meta property="og:url" content={canonicalURL} />
     <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <link rel="icon" type="image/svg+xml" href="/lyon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,10 +81,12 @@ const pathname = Astro.url.pathname;
         </a>
         <ul class="nav-links">
           <li><a href="/" class={pathname === '/' ? 'active' : ''}>Inicio</a></li>
-          <li><a href="/servicios" class={pathname === '/servicios' ? 'active' : ''}>Servicios</a></li>
+          <li><a href="/servicios" class={pathname === '/servicios' ? 'active' : ''}>Soluciones</a></li>
+          <li><a href="/agentes-ia-villavicencio" class={pathname === '/agentes-ia-villavicencio' ? 'active' : ''}>Agentes IA</a></li>
+          <li><a href="/id" class={pathname === '/id' ? 'active' : ''}>I+D</a></li>
           <li><a href="/contacto" class={pathname === '/contacto' ? 'active' : ''}>Contacto</a></li>
         </ul>
-        <a href="/contacto" class="btn btn-primary nav-cta">Agendar diagnóstico →</a>
+        <a href="/contacto" class="btn btn-primary nav-cta">Agenda tu diagnóstico gratis →</a>
       </div>
     </nav>
 
@@ -77,38 +104,41 @@ const pathname = Astro.url.pathname;
               </span>
               <span class="logo-text">Stellart Corp</span>
             </a>
-            <p class="footer-tagline">Arquitectura empresarial e inteligencia operacional.</p>
+            <p class="footer-tagline">Inteligencia artificial operacional desde Villavicencio, Colombia.</p>
           </div>
           <div class="footer-links">
             <div class="footer-col">
               <span class="footer-col-title">Navegación</span>
               <ul>
                 <li><a href="/">Inicio</a></li>
-                <li><a href="/servicios">Servicios</a></li>
+                <li><a href="/servicios">Soluciones</a></li>
+                <li><a href="/agentes-ia-villavicencio">Agentes IA</a></li>
+                <li><a href="/id">I+D</a></li>
                 <li><a href="/contacto">Contacto</a></li>
               </ul>
             </div>
             <div class="footer-col">
-              <span class="footer-col-title">Servicios</span>
+              <span class="footer-col-title">Soluciones</span>
               <ul>
                 <li><a href="/servicios#diagnostico">Diagnóstico</a></li>
+                <li><a href="/servicios#ia">Agentes IA</a></li>
                 <li><a href="/servicios#software">Software a medida</a></li>
-                <li><a href="/servicios#kpis">Dashboards KPIs</a></li>
+                <li><a href="/servicios#marketing">Marketing con IA</a></li>
               </ul>
             </div>
             <div class="footer-col">
               <span class="footer-col-title">Contacto</span>
               <ul>
                 <li><a href="mailto:hola@stellart.site">hola@stellart.site</a></li>
-                <li><a href="/contacto#descarga">Guía gratuita</a></li>
-                <li><a href="/contacto">Agendar reunión</a></li>
+                <li><a href="tel:+573027470798">+57 302 747 0798</a></li>
+                <li><a href="/contacto">Agenda diagnóstico gratis</a></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
-          <span>Stellart Corp ©</span>
-          <span class="footer-meta">Diseñado y construido para facturar.</span>
+          <span>Stellart Corp © — Villavicencio, Meta, Colombia</span>
+          <span class="footer-meta">Construido desde el Llano para el mundo.</span>
         </div>
       </div>
     </footer>
